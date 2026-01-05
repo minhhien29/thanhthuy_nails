@@ -60,4 +60,61 @@ input, select { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 
 .btn-close { flex: 1; padding: 12px; background: #eee; border: none; border-radius: 10px; cursor: pointer; }
 
 footer { padding: 50px; text-align: center; color: #888; }
-.dev { font-size: 0.8rem; margin-top: 10px; }   
+
+.dev { font-size: 0.8rem; margin-top: 10px; }  
+/* Tối ưu hóa cho thiết bị di động */
+@media (max-width: 600px) {
+    /* 1. Sửa lỗi Logo và Nút Đặt lịch bị lệch hàng */
+    .nav-box {
+        flex-direction: row !important; /* Đảm bảo logo và nút vẫn nằm cùng hàng */
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 10px !important;
+    }
+
+    .logo {
+        font-size: 1.5rem !important; /* Thu nhỏ tên thương hiệu */
+    }
+
+    .btn-nav {
+        padding: 6px 12px !important; /* Thu nhỏ nút đặt lịch */
+        font-size: 0.8rem !important;
+        white-space: nowrap !important; /* Không cho chữ nhảy xuống dòng */
+    }
+
+    /* 2. Sửa lỗi Tiêu đề "Sắc đỏ may mắn" quá to */
+    .hero-content h2 {
+        font-size: 1.8rem !important; /* Giảm cỡ chữ tiêu đề */
+        line-height: 1.3 !important;
+        text-align: center !important;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem !important;
+        text-align: center !important;
+    }
+
+    .hero-flex {
+        flex-direction: column !important; /* Đẩy ảnh xuống dưới chữ trên điện thoại */
+        gap: 20px !important;
+    }
+
+    /* 3. Sửa lỗi bảng lịch 9 cột bị bóp méo */
+    .row-slots {
+        display: flex !important;
+        overflow-x: auto !important; /* Cho phép khách vuốt ngang để chọn giờ */
+        gap: 8px !important;
+        padding: 10px 0 !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .slot-btn {
+        min-width: 55px !important; /* Giữ kích thước nút cố định để không bị méo */
+        height: 45px !important;
+    }
+
+    .row-date {
+        width: 100px !important; /* Thu nhỏ cột ngày để nhường chỗ cho giờ */
+        font-size: 0.75rem !important;
+    }
+}
