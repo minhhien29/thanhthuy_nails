@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanhthuy Nails | Lịch Tết Rực Rỡ 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-box">
+            <h1 class="logo">Thanhthuy <span>Nails</span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#portfolio">Mẫu Nails</a></li>
+                    <li><a href="#booking" class="btn-nav">Đặt Lịch Tết</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <span class="tag-tet">🧧 Tết Nguyên Đán 2026</span>
+                <h2>Sắc Đỏ <span class="accent">May Mắn</span><br>Móng Đẹp Đón Xuân</h2>
+                <p>Hệ thống đặt lịch trực tuyến giúp nàng giữ chỗ nhanh chóng. Đừng để đôi bàn tay kém xinh trong những ngày đầu năm!</p>
+                <a href="#booking" class="btn-main">XEM LỊCH TRỐNG</a>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=600" alt="Nails Banner">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="title">Bộ Sưu Tập Tết rực rỡ</h2>
+            <div class="portfolio-grid">
+                <div class="p-item"><img src="/photo/1.jpg" alt="Mẫu 1"></div>
+                <div class="p-item"><img src="/photo/2.jpg" alt="Mẫu 2"></div>
+                <div class="p-item"><img src="/photo/3.jpg" alt="Mẫu 3"></div>
+                <div class="p-item"><img src="/photo/4.jpg" alt="Mẫu 4"></div>
+                <div class="p-item"><img src="/photo/5.jpg" alt="Mẫu 5"></div>
+                <div class="p-item"><img src="/photo/6.jpg" alt="Mẫu 6"></div>
+                <div class="p-item"><img src="/photo/7.jpg" alt="Mẫu 7"></div>
+                <div class="p-item"><img src="/photo/9.jpg" alt="Mẫu 8"></div>
+                <div class="p-item"><img src="/photo/10.webp" alt="Mẫu 9"></div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="title">Lịch Phục Vụ Tết</h2>
+            <p class="subtitle">Chọn ô giờ tương ứng để đăng ký giữ chỗ (Ô đỏ là còn trống)</p>
+            
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <div class="col-date">Ngày (Dương/Âm)</div>
+                    <div class="col-slots">Khung Giờ Nhận Khách</div>
+                </div>
+                <div id="calendarBody" class="calendar-body">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="bookingModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>📝 Thông Tin Đặt Lịch</h3>
+            <p id="infoDisplay" class="info-text"></p>
+            <form id="nailForm">
+                <input type="text" id="custName" placeholder="Họ tên của nàng" required>
+                <input type="tel" id="custPhone" placeholder="Số điện thoại" required>
+                <select id="custService">
+                    <option value="Sơn Gel">Sơn Gel - 70k</option>
+                    <option value="Úp móng">Úp móng thiết kế - 150k</option>
+                    <option value="Đính đá">Đính đá nghệ thuật</option>
+                </select>
+                <div class="modal-btns">
+                    <button type="button" onclick="closeModal()" class="btn-close">Quay lại</button>
+                    <button type="submit" class="btn-confirm">Xác Nhận Đặt</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thanhthuy Nails - Sắc Đẹp Trên Từng Ngón Tay</p>
+        <p class="dev">Design by Mh</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
