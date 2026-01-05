@@ -62,7 +62,44 @@ input, select { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 
 footer { padding: 50px; text-align: center; color: #888; }
 
 .dev { font-size: 0.8rem; margin-top: 10px; }  
-/* Tối ưu hóa phông chữ và bố cục cho màn hình nhỏ */
+/* Đặc trị lỗi hiển thị trên Messenger và điện thoại nhỏ */
+@media (max-width: 480px) {
+    /* 1. Ép dòng Logo và Nút Đặt lịch không bao giờ bị nhảy */
+    .nav-box {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* Không cho phép xuống dòng */
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 60px !important;
+    }
+
+    .logo {
+        font-size: 1.1rem !important; /* Giảm cỡ chữ logo xuống mức tối thiểu */
+        white-space: nowrap !important;
+    }
+
+    .btn-nav {
+        font-size: 0.65rem !important;
+        padding: 6px 10px !important;
+        min-width: 80px !important;
+    }
+
+    /* 2. Giảm phông chữ tiêu đề chính để không chiếm hết màn hình */
+    .hero-content h2 {
+        font-size: 1.3rem !important;
+        line-height: 1.2 !important;
+        margin-top: 5px !important;
+    }
+
+    /* 3. Đảm bảo bảng lịch vẫn có thể vuốt được */
+    .row-slots {
+        display: flex !important;
+        overflow-x: scroll !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 5px !important;
+    }
+}/* Tối ưu hóa phông chữ và bố cục cho màn hình nhỏ */
 @media (max-width: 600px) {
     /* Giảm cỡ chữ tiêu đề Hero để không chiếm hết màn hình */
     .hero-content h2 {
@@ -97,3 +134,4 @@ footer { padding: 50px; text-align: center; color: #888; }
         padding: 8px 0 !important;
     }
 }
+
